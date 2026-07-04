@@ -28,6 +28,7 @@ export default function Work() {
           <a className="coverlink" href={`/work/${p.slug}`}>
             <Cover slug={p.slug} name={p.name} index={i} height={420} />
           </a>
+          <span className="fig">FIG_{String(i + 1).padStart(2, "0")} · {p.name.toLowerCase()} interface</span>
           <p className="desc">{p.desc}</p>
           <div className="links">
             <a href={`/work/${p.slug}`}>Read case study <ArrowIcon /></a>

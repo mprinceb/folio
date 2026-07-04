@@ -1,5 +1,6 @@
 import { projects, smallRepos } from "./projects";
 import Cover from "./components/Cover";
+import Contributions from "./components/Contributions";
 import { GitHubIcon, LinkedInIcon, MailIcon } from "./components/Icons";
 
 const featured = projects.slice(0, 2);
@@ -48,6 +49,7 @@ export default function Home() {
               <a href="https://github.com/mprinceb" target="_blank" rel="noreferrer"><GitHubIcon /> GitHub</a>
               <a href="https://linkedin.com/in/mprincebaghel" target="_blank" rel="noreferrer"><LinkedInIcon /> LinkedIn</a>
               <a href="mailto:pkbghl2@gmail.com"><MailIcon /> Email</a>
+              <a href="/resume.pdf" download="Prince_Baghel_Resume.pdf">↓ Resume</a>
             </div>
             <div className="intro">
               <p>
@@ -73,6 +75,7 @@ export default function Home() {
               {featured.map((f, i) => (
                 <a className="coverlink flabel" key={f.slug} href={`/work/${f.slug}`}>
                   <Cover slug={f.slug} name={f.name} index={i} height={210} />
+                  <span className="fig">FIG_{String(i + 1).padStart(2, "0")} · {f.name.toLowerCase()} interface</span>
                   <h3>{f.title}</h3>
                   <p>{f.desc.slice(0, 90)}…</p>
                 </a>
@@ -178,6 +181,7 @@ export default function Home() {
 
           <section id="opensource">
             <h2 data-idx="04"><a href="https://github.com/mprinceb" target="_blank" rel="noreferrer">Open source ↗</a></h2>
+            <Contributions />
             <div className="repos">
               {smallRepos.map((r) => (
                 <a className="repo" key={r.name} href={r.url} target="_blank" rel="noreferrer">
