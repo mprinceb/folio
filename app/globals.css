@@ -261,14 +261,15 @@ h1.name {
 .case .coverwrap { margin: 26px 0 8px; }
 
 
-/* work page — pratik-style split */
-.pcard { border-top: none; padding: 34px 0 44px; }
+/* work page — centered stack */
+.pcard { border-top: none; padding: 40px 0 52px; display: flex; flex-direction: column; align-items: center; text-align: center; }
 .pcard + .pcard { border-top: 1px solid var(--line); }
-.pgrid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 18px 44px; margin-top: 24px; }
-.pgrid h2 { font-size: 28px; line-height: 1.2; letter-spacing: -.015em; }
-.pmeta { display: flex; flex-direction: column; gap: 4px; margin-top: 12px; }
-.pgrid .links { display: flex; gap: 22px; margin-top: 16px; }
-.pgrid .links a { font-family: var(--mono); font-size: 13px; color: var(--accent); display: inline-flex; align-items: center; gap: 7px; }
-.pgrid .links a:hover { text-decoration: underline; text-underline-offset: 4px; }
-.pgrid .tags { margin-top: 16px; }
-@media (max-width: 720px) { .pgrid { grid-template-columns: 1fr; } }
+.pcard h2 { font-size: clamp(24px, 3.5vw, 32px); line-height: 1.2; letter-spacing: -.015em; max-width: 700px; }
+.pcard h2 a:hover { color: var(--accent); }
+.pmeta { display: flex; gap: 18px; align-items: baseline; margin: 10px 0 22px; justify-content: center; flex-wrap: wrap; }
+.pcard .coverlink { width: 100%; }
+.pcard .desc { margin-top: 22px; max-width: 640px; }
+.pcard .links { display: flex; gap: 26px; margin-top: 16px; justify-content: center; }
+.pcard .links a { font-family: var(--mono); font-size: 13px; color: var(--accent); display: inline-flex; align-items: center; gap: 7px; }
+.pcard .links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.pcard .tags { margin-top: 16px; justify-content: center; }
