@@ -1,4 +1,5 @@
 import { projects } from "../projects";
+import Cover from "../components/Cover";
 
 export const metadata = {
   title: "Work — Prince Baghel",
@@ -18,6 +19,9 @@ export default function Work() {
       </div>
       {projects.map((p) => (
         <div className="pcard" key={p.slug} id={p.slug}>
+          <a className="coverlink" href={`/work/${p.slug}`}>
+            <Cover slug={p.slug} name={p.name} index={projects.indexOf(p)} height={280} />
+          </a>
           <div className="p-top">
             <h2><a href={`/work/${p.slug}`}>{p.name}</a></h2>
             <span className="period">{p.period}</span>

@@ -1,5 +1,6 @@
 import { projects } from "../../projects";
 import { notFound } from "next/navigation";
+import Cover from "../../components/Cover";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -34,6 +35,10 @@ export default async function CaseStudy({ params }) {
         </div>
         <div className="tags">
           {p.tags.map((t) => <span key={t}>{t}</span>)}
+        </div>
+
+        <div className="coverwrap">
+          <Cover slug={p.slug} name={p.name} index={idx} height={300} />
         </div>
 
         {p.sections.map((s) => (

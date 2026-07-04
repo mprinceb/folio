@@ -2,7 +2,6 @@
 
 Custom Next.js 15 portfolio (App Router, plain CSS, zero UI libraries). Fully static — 15 prerendered pages including per-project case studies.
 
-**Preview without installing anything:** double-click `preview/index.html` — a fully clickable static build.
 
 ## Structure
 
@@ -16,7 +15,6 @@ portfolio/
 │   ├── projects.js          ← ALL project + repo content lives here
 │   ├── components/Clock.jsx ← live clock (client component)
 │   └── globals.css          ← design system (colors/fonts in :root)
-├── preview/                 ← static build, openable directly in a browser
 ├── package.json
 └── next.config.mjs
 ```

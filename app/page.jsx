@@ -1,6 +1,8 @@
 import { projects, smallRepos } from "./projects";
+import Cover from "./components/Cover";
+import { GitHubIcon, LinkedInIcon, MailIcon } from "./components/Icons";
 
-const featured = projects.slice(0, 4);
+const featured = projects.slice(0, 2);
 
 export default function Home() {
   return (
@@ -43,9 +45,9 @@ export default function Home() {
               Full Stack Engineer <span>|</span> Distributed Systems &amp; ERP Automation <span>|</span> DevOps
             </p>
             <div className="socials">
-              <a href="https://github.com/mprinceb" target="_blank" rel="noreferrer">⌥ GitHub</a>
-              <a href="https://linkedin.com/in/mprincebaghel" target="_blank" rel="noreferrer">in LinkedIn</a>
-              <a href="mailto:pkbghl2@gmail.com">✉ Email</a>
+              <a href="https://github.com/mprinceb" target="_blank" rel="noreferrer"><GitHubIcon /> GitHub</a>
+              <a href="https://linkedin.com/in/mprincebaghel" target="_blank" rel="noreferrer"><LinkedInIcon /> LinkedIn</a>
+              <a href="mailto:pkbghl2@gmail.com"><MailIcon /> Email</a>
             </div>
             <div className="intro">
               <p>
@@ -67,10 +69,19 @@ export default function Home() {
                 their keep — let's build yours.
               </p>
             </div>
+            <div className="featured" style={{ marginTop: 38 }}>
+              {featured.map((f, i) => (
+                <a className="coverlink flabel" key={f.slug} href={`/work/${f.slug}`}>
+                  <Cover slug={f.slug} name={f.name} index={i} height={210} />
+                  <h3>{f.title}</h3>
+                  <p>{f.desc.slice(0, 90)}…</p>
+                </a>
+              ))}
+            </div>
           </section>
 
           <section id="experience">
-            <h2>Work Experience</h2>
+            <h2 data-idx="01">Work Experience</h2>
 
             <div className="xp">
               <div className="xp-head">
@@ -113,7 +124,7 @@ export default function Home() {
           </section>
 
           <section id="studies">
-            <h2>Studies</h2>
+            <h2 data-idx="02">Studies</h2>
             <div className="xp">
               <div className="xp-head">
                 <h3>Dharma Samaj College, Aligarh</h3>
@@ -127,7 +138,7 @@ export default function Home() {
           </section>
 
           <section id="skills">
-            <h2>Technical skills</h2>
+            <h2 data-idx="03">Technical skills</h2>
 
             <div className="skillgroup">
               <h4>Backend &amp; distributed systems</h4>
@@ -155,7 +166,7 @@ export default function Home() {
           </section>
 
           <section id="opensource">
-            <h2><a href="https://github.com/mprinceb" target="_blank" rel="noreferrer">Open source ↗</a></h2>
+            <h2 data-idx="04"><a href="https://github.com/mprinceb" target="_blank" rel="noreferrer">Open source ↗</a></h2>
             <div className="repos">
               {smallRepos.map((r) => (
                 <a className="repo" key={r.name} href={r.url} target="_blank" rel="noreferrer">
@@ -171,7 +182,7 @@ export default function Home() {
           </section>
 
           <section id="contact" className="contact-blk">
-            <h2>Contact</h2>
+            <h2 data-idx="05">Contact</h2>
             <p>
               Open to full-stack, backend, and platform roles — remote or
               Bengaluru. If you're building something that needs to work
