@@ -259,3 +259,16 @@ h1.name {
 
 /* case hero cover */
 .case .coverwrap { margin: 26px 0 8px; }
+
+
+/* work page — pratik-style split */
+.pcard { border-top: none; padding: 34px 0 44px; }
+.pcard + .pcard { border-top: 1px solid var(--line); }
+.pgrid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 18px 44px; margin-top: 24px; }
+.pgrid h2 { font-size: 28px; line-height: 1.2; letter-spacing: -.015em; }
+.pmeta { display: flex; flex-direction: column; gap: 4px; margin-top: 12px; }
+.pgrid .links { display: flex; gap: 22px; margin-top: 16px; }
+.pgrid .links a { font-family: var(--mono); font-size: 13px; color: var(--accent); display: inline-flex; align-items: center; gap: 7px; }
+.pgrid .links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.pgrid .tags { margin-top: 16px; }
+@media (max-width: 720px) { .pgrid { grid-template-columns: 1fr; } }

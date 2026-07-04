@@ -112,6 +112,17 @@ export default function Home() {
 
             <div className="xp">
               <div className="xp-head">
+                <h3>Freelance</h3>
+                <span className="date">2025 — present</span>
+              </div>
+              <div className="role">Full Stack Engineer</div>
+              <ul>
+                <li>Built and operate a self-hosted <a href="/work/hms" style={{ borderBottom: "1px dashed var(--line)" }}>hospital management system</a> — patient records, appointments, and clinic workflows on an in-house Linux server with Postgres, secure remote access, and automated backups.</li>
+              </ul>
+            </div>
+
+            <div className="xp">
+              <div className="xp-head">
                 <h3>AgSpeak</h3>
                 <span className="date">May 2023 — Dec 2024</span>
               </div>

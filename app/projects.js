@@ -145,6 +145,39 @@ export const projects = [
     github: null,
   },
   {
+    slug: "hms",
+    name: "HMS",
+    title: "HMS — Self-Hosted Hospital Management System",
+    role: "Full Stack · Freelance",
+    period: "2025",
+    desc: "A hospital management system covering patient records, appointment scheduling, and daily clinic workflows — self-hosted on an in-house Linux server with Postgres, exposed securely for remote access, with automated backups.",
+    tags: ["React", "Node.js", "Postgres", "Linux", "Self-hosted", "Nginx"],
+    sections: [
+      {
+        h: "Overview",
+        p: [
+          "A freelance engagement to build and operate a hospital management system that the clinic fully owns: patient records, appointment scheduling, and the day-to-day workflows of the practice — running on their own hardware instead of a per-seat SaaS subscription.",
+        ],
+      },
+      {
+        h: "What I built",
+        bullets: [
+          "Patient registration and records, appointment scheduling, and daily workflow screens for front-desk and clinical staff.",
+          "Self-hosted deployment on an in-house Linux server with a Postgres database.",
+          "Secure remote access without exposing the hospital network directly to the internet.",
+          "Automated, scheduled backups so patient data survives hardware failure.",
+        ],
+      },
+      {
+        h: "Why self-hosted",
+        p: [
+          "Healthcare data is sensitive and clinics want control and predictable costs. Owning the stack end to end — server, database, backups, access — keeps patient data on-premises and the monthly bill at zero.",
+        ],
+      },
+    ],
+    github: null,
+  },
+  {
     slug: "md-task-tracker",
     name: "md-task-tracker",
     title: "md-task-tracker — Markdown + Git Work Tracker",
