@@ -2,34 +2,39 @@ import { projects } from "../projects";
 
 export const metadata = {
   title: "Work — Prince Baghel",
-  description: "Projects by Prince Baghel: SXD, FirstCheck, vv-ERP, AgSpeak.",
+  description:
+    "Projects by Prince Baghel: distributed robotics pipelines, clinical desktop software, ERP automation, and open-source tooling.",
 };
 
 export default function Work() {
   return (
-    <main className="wrap detail">
-      <div className="hero" style={{ padding: "70px 0 10px" }}>
-        <div className="kicker">work</div>
-        <h1 style={{ fontSize: "clamp(30px, 5vw, 44px)" }}>
-          Four systems, <em>shipped and running.</em>
-        </h1>
+    <div className="page" style={{ maxWidth: 880 }}>
+      <div className="workhero">
+        <h1>Systems shipped and running.</h1>
+        <p>
+          Production platforms built at Technoculture Research and AgSpeak,
+          plus open-source tooling from my GitHub. Each one has a case study.
+        </p>
       </div>
-      {projects.map((p, i) => (
-        <article key={p.slug} id={p.slug}>
-          <div className="p-num" style={{ marginBottom: 8 }}>
-            {String(i + 1).padStart(2, "0")}
+      {projects.map((p) => (
+        <div className="pcard" key={p.slug} id={p.slug}>
+          <div className="p-top">
+            <h2><a href={`/work/${p.slug}`}>{p.name}</a></h2>
+            <span className="period">{p.period}</span>
           </div>
-          <h2>{p.name} — {p.tagline}</h2>
-          <div className="p-role">{p.role}</div>
-          <ul>
-            {p.detail.map((d) => <li key={d}>{d}</li>)}
-          </ul>
+          <span className="role">{p.role}</span>
+          <p className="desc">{p.desc}</p>
+          <div className="links">
+            <a href={`/work/${p.slug}`}>Read case study</a>
+            {p.github && (
+              <a href={p.github} target="_blank" rel="noreferrer">View on GitHub ↗</a>
+            )}
+          </div>
           <div className="tags">
             {p.tags.map((t) => <span key={t}>{t}</span>)}
           </div>
-        </article>
+        </div>
       ))}
-      <a className="back" href="/">← back home</a>
-    </main>
+    </div>
   );
 }

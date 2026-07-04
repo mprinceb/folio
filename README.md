@@ -1,17 +1,22 @@
-# Prince Baghel — Portfolio
+# Prince Baghel — Portfolio (v2)
 
-Custom Next.js 15 portfolio (App Router, plain CSS, zero UI libraries). Fully static — builds to 5 prerendered pages.
+Custom Next.js 15 portfolio (App Router, plain CSS, zero UI libraries). Fully static — 15 prerendered pages including per-project case studies.
+
+**Preview without installing anything:** double-click `preview/index.html` — a fully clickable static build.
 
 ## Structure
 
 ```
 portfolio/
 ├── app/
-│   ├── layout.jsx     ← nav, footer, metadata
-│   ├── page.jsx       ← home: hero, work index, experience, skills, contact
-│   ├── work/page.jsx  ← project detail pages
-│   ├── projects.js    ← all project content lives here (edit this to update work)
-│   └── globals.css    ← design system (colors/fonts in :root)
+│   ├── layout.jsx           ← pill nav, live IST clock, footer, metadata
+│   ├── page.jsx             ← home: TOC, avatar, intro, experience, studies, skills, open-source grid, contact
+│   ├── work/page.jsx        ← work index (all case studies)
+│   ├── work/[slug]/page.jsx ← per-project case-study pages (10 projects)
+│   ├── projects.js          ← ALL project + repo content lives here
+│   ├── components/Clock.jsx ← live clock (client component)
+│   └── globals.css          ← design system (colors/fonts in :root)
+├── preview/                 ← static build, openable directly in a browser
 ├── package.json
 └── next.config.mjs
 ```

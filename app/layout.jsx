@@ -1,60 +1,47 @@
 import "./globals.css";
+import Clock from "./components/Clock";
 
 export const metadata = {
   title: "Prince Baghel — Full Stack Engineer",
   description:
-    "Full-stack engineer building production systems end to end — backend services, automation pipelines, and the React interfaces on top.",
+    "Full-stack engineer in Bengaluru building production systems end to end — distributed pipelines, clinical desktop software, ERP automation, and the React interfaces on top.",
   metadataBase: new URL("https://princebaghel.vercel.app"),
   openGraph: {
     title: "Prince Baghel — Full Stack Engineer",
     description:
-      "Backend services, automation pipelines, and the React interfaces on top.",
+      "Distributed pipelines, clinical desktop software, ERP automation, and the React interfaces on top.",
     type: "website",
   },
 };
-
-function Nav() {
-  return (
-    <nav>
-      <div className="wrap">
-        <a className="logo" href="/">
-          prince<span>@</span>baghel
-        </a>
-        <ul>
-          <li><a href="/work">work</a></li>
-          <li><a href="/#experience">experience</a></li>
-          <li><a href="/#skills">skills</a></li>
-          <li><a href="/#contact">contact</a></li>
-        </ul>
-      </div>
-    </nav>
-  );
-}
-
-function Footer() {
-  return (
-    <footer>
-      <div className="wrap">
-        <span>© {new Date().getFullYear()} Prince Baghel · Bengaluru, India</span>
-        <span>
-          <a href="https://github.com/mprinceb" target="_blank" rel="noreferrer">github</a>
-          {" · "}
-          <a href="https://linkedin.com/in/mprincebaghel" target="_blank" rel="noreferrer">linkedin</a>
-          {" · "}
-          <a href="mailto:pkbghl2@gmail.com">email</a>
-        </span>
-      </div>
-    </footer>
-  );
-}
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Nav />
+        <div className="topbar">
+          <span className="loc">Bengaluru, India</span>
+          <nav className="pillnav">
+            <a href="/">home</a>
+            <span className="sep" />
+            <a href="/work">work</a>
+            <a href="/#experience">experience</a>
+            <a href="/#contact">contact</a>
+          </nav>
+          <span className="clock"><Clock /></span>
+        </div>
         {children}
-        <Footer />
+        <footer>
+          <div className="inner">
+            <span>© {new Date().getFullYear()} / Prince Baghel</span>
+            <span>
+              <a href="https://github.com/mprinceb" target="_blank" rel="noreferrer">github</a>
+              {"  ·  "}
+              <a href="https://linkedin.com/in/mprincebaghel" target="_blank" rel="noreferrer">linkedin</a>
+              {"  ·  "}
+              <a href="mailto:pkbghl2@gmail.com">pkbghl2@gmail.com</a>
+            </span>
+          </div>
+        </footer>
       </body>
     </html>
   );
