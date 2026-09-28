@@ -12,7 +12,7 @@ export default function Work() {
   return (
     <div className="page" style={{ maxWidth: 980 }}>
       <div className="workhero" style={{ textAlign: "center" }}>
-        <h1>Systems shipped and running.</h1>
+        <h1>Production work &amp; public projects.</h1>
         <p style={{ margin: "14px auto 0" }}>
           Production platforms built at Technoculture Research and AgSpeak,
           freelance builds, and open-source tooling from my GitHub.
@@ -28,7 +28,7 @@ export default function Work() {
           <a className="coverlink" href={`/work/${p.slug}`}>
             <Cover slug={p.slug} name={p.name} index={i} height={420} />
           </a>
-          <span className="fig">FIG_{String(i + 1).padStart(2, "0")} · {p.name.toLowerCase()} interface</span>
+          <span className="fig">Concept illustration · {p.name} · not a product screenshot</span>
           <p className="desc">{p.desc}</p>
           <div className="links">
             <a href={`/work/${p.slug}`}>Read case study <ArrowIcon /></a>

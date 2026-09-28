@@ -3,7 +3,7 @@ import Cover from "./components/Cover";
 import Contributions from "./components/Contributions";
 import { GitHubIcon, LinkedInIcon, MailIcon } from "./components/Icons";
 
-const featured = projects.slice(0, 2);
+const featured = ["sxd", "firstcheck", "md-task-tracker"].map((slug) => projects.find((p) => p.slug === slug));
 
 export default function Home() {
   return (
@@ -11,6 +11,7 @@ export default function Home() {
       <div className="cols">
         <aside className="toc">
           <a href="#introduction">Introduction</a>
+          <a href="#selected-work">Selected work</a>
           <a href="#experience">Work Experience</a>
           <a href="#studies">Studies</a>
           <a href="#skills">Technical skills</a>
@@ -43,7 +44,7 @@ export default function Home() {
             </a>
             <h1 className="name">Prince Baghel</h1>
             <p className="subtitle">
-              Full Stack Engineer <span>|</span> Distributed Systems &amp; ERP Automation <span>|</span> DevOps
+              Software Engineer <span>|</span> Backend &amp; Full Stack
             </p>
             <div className="socials">
               <a href="https://github.com/mprinceb" target="_blank" rel="noreferrer"><GitHubIcon /> GitHub</a>
@@ -53,34 +54,39 @@ export default function Home() {
             </div>
             <div className="intro">
               <p>
-                I'm Prince Baghel, a full-stack engineer in Bengaluru who builds
-                production systems end to end. At Technoculture Research I built
-                the backend of SXD, a distributed robotics data-processing
-                platform with idempotent multi-stage CPU/GPU pipelines; shipped
-                FirstCheck, a clinical desktop platform that talks to lab
-                analyzers over serial protocols and keeps patient data encrypted
-                at rest; and automated the company's entire business on
-                ERPNext — payroll, payments, accounting, and stock — processing
-                300,000+ payment entries and running it all on Kubernetes with
-                ArgoCD.
+                I build backend services, integrations, and the interfaces on top.
+                Based in Bengaluru, I have 3+ years of experience working with
+                Python, FastAPI, PostgreSQL, Node.js, TypeScript, and React.
               </p>
               <p>
-                I work in Node.js/TypeScript and Python, care about idempotency,
-                auditability, and systems that recover cleanly from failure, and
-                I ship the React interfaces on top. Reliable systems that earn
-                their keep — let's build yours.
+                At Technoculture Research, my work spans recoverable robotics
+                data pipelines, clinical desktop software, and ERP automation.
+                I work across implementation and deployment, with a focus on
+                safe retries, auditable data, and reliable integrations.
               </p>
             </div>
-            <div className="featured" style={{ marginTop: 38 }}>
+            <div className="proof-strip" aria-label="Experience at a glance">
+              <div><strong>3+ years</strong><span>Software engineering</span></div>
+              <div><strong>3 products</strong><span>At Technoculture Research</span></div>
+              <div><strong>300,000+</strong><span>Payment entries processed</span></div>
+            </div>
+          </section>
+
+          <section id="selected-work">
+            <h2 data-idx="00">Selected work</h2>
+            <p className="section-lede">Start with a production case study, then explore a project with public source code.</p>
+            <div className="featured">
               {featured.map((f, i) => (
                 <a className="coverlink flabel" key={f.slug} href={`/work/${f.slug}`}>
                   <Cover slug={f.slug} name={f.name} index={i} height={210} />
-                  <span className="fig">FIG_{String(i + 1).padStart(2, "0")} · {f.name.toLowerCase()} interface</span>
+                  <span className="fig">Concept illustration · {f.name}</span>
                   <h3>{f.title}</h3>
-                  <p>{f.desc.slice(0, 90)}…</p>
+                  <p>{f.desc}</p>
+                  <span className="evidence-label">{f.github ? "Case study + public source →" : "Production case study →"}</span>
                 </a>
               ))}
             </div>
+            <a className="text-link" href="/work">Explore all {projects.length} projects →</a>
           </section>
 
           <section id="experience">
@@ -189,7 +195,6 @@ export default function Home() {
                   <p>{r.desc}</p>
                   <span className="meta">
                     <span>● {r.lang}</span>
-                    {r.stars > 0 && <span>★ {r.stars}</span>}
                   </span>
                 </a>
               ))}
@@ -199,10 +204,11 @@ export default function Home() {
           <section id="contact" className="contact-blk">
             <h2 data-idx="05">Contact</h2>
             <p>
-              Open to full-stack, backend, and platform roles — remote or
-              Bengaluru. If you're building something that needs to work
-              reliably in production, let's talk.
+              Open to backend and full-stack engineering roles, including
+              forward-deployed work involving implementation and integrations.
+              Based in Bengaluru; open to on-site, hybrid, and remote work.
             </p>
+            <p className="contact-note">Share the role, team, location, and expected scope. I can walk through the relevant systems and engineering decisions.</p>
             <a className="mailbtn" href="mailto:pkbghl2@gmail.com">pkbghl2@gmail.com →</a>
           </section>
         </main>
