@@ -80,25 +80,25 @@ export const projects = [
   {
     slug: "vv-erp",
     name: "vv-ERP",
-    title: "vv-ERP — ERPNext & Frappe Business Automation at Scale",
-    role: "Automation / DevOps Engineer · Technoculture Research",
+    title: "vv-ERP — End-to-End ERP Migration & Business Automation",
+    role: "Software Engineer · ERP Migration & Platform Ownership",
     period: "2023 — present",
-    desc: "End-to-end automation of CRM, payroll, payments, accounting, and stock workflows on ERPNext/Frappe — including a full payroll/HRMS migration from Keka and 300,000+ processed payment entries.",
+    desc: "Owned the complete Vastu Vihar ERP migration and ongoing ERPNext/Frappe engineering across business workflows. The migration included 300,000+ payment entries alongside broader ERP data and HRMS migration from Keka.",
     tags: ["Frappe / ERPNext", "Python", "Kubernetes", "ArgoCD", "Keycloak", "Nginx", "ELK"],
     sections: [
       {
         h: "Overview",
         p: [
-          "vv-ERP is the company-wide ERPNext deployment I automated and operated: CRM, payroll, payments, accounting, and stock workflows all run through it. The work spans business-rule automation in Python on Frappe and the DevOps platform underneath.",
+          "I owned the complete migration for Vastu Vihar’s company-wide ERP, followed by ongoing customization and operations on ERPNext/Frappe. The scope extends across CRM, sales, accounting, payments, stock, construction, HR and payroll. The 300,000+ payment entries represent one part of that migration, not its full scope.",
         ],
       },
       {
         h: "Automation",
         bullets: [
           "Automated CRM, payroll, payment, accounting, and stock workflows with Frappe server scripts and custom apps.",
-          "Migrated payroll & HRMS from Keka to ERPNext without disrupting pay cycles.",
-          "Processed 300,000+ payment entries through automated pipelines.",
-          "Published frappe-extend-auth, an open-source Frappe app enabling secure cross-site cookie auth for external frontends.",
+          "Owned the end-to-end ERP migration, including payroll and HRMS migration from Keka to ERPNext.",
+          "Migrated 300,000+ payment entries as part of the wider ERP migration.",
+          "Published frappe-extend-auth, an open-source Frappe app configuring cross-site cookie behavior for allowed origins.",
         ],
       },
       {
@@ -145,37 +145,169 @@ export const projects = [
     github: null,
   },
   {
-    slug: "hms",
-    name: "HMS",
-    title: "HMS — Self-Hosted Hospital Management System",
-    role: "Full Stack · Freelance",
-    period: "2025",
-    desc: "A hospital management system covering patient records, appointment scheduling, and daily clinic workflows — self-hosted on an in-house Linux server with Postgres, exposed securely for remote access, with automated backups.",
-    tags: ["React", "Node.js", "Postgres", "Linux", "Self-hosted", "Nginx"],
-    sections: [
-      {
-        h: "Overview",
-        p: [
-          "A freelance engagement to build and operate a hospital management system that the clinic fully owns: patient records, appointment scheduling, and the day-to-day workflows of the practice — running on their own hardware instead of a per-seat SaaS subscription.",
-        ],
-      },
-      {
-        h: "What I built",
-        bullets: [
-          "Patient registration and records, appointment scheduling, and daily workflow screens for front-desk and clinical staff.",
-          "Self-hosted deployment on an in-house Linux server with a Postgres database.",
-          "Secure remote access without exposing the hospital network directly to the internet.",
-          "Automated, scheduled backups so patient data survives hardware failure.",
-        ],
-      },
-      {
-        h: "Why self-hosted",
-        p: [
-          "Healthcare data is sensitive and clinics want control and predictable costs. Owning the stack end to end — server, database, backups, access — keeps patient data on-premises and the monthly bill at zero.",
-        ],
-      },
+    "slug": "hms",
+    "name": "HMS",
+    "title": "HMS — Hospital Management Platform",
+    "role": "Full Stack Engineer · Private project",
+    "period": "2026",
+    "desc": "Built across a hospital management platform’s Next.js frontend, TypeScript backend, shared API contracts, authentication, and clinical and administrative workflows.",
+    "tags": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "OpenAPI"
     ],
-    github: null,
+    "sections": [
+      {
+        "h": "My contribution",
+        "p": [
+          "My work spans the staff-facing web application, backend services, and the shared contracts between them. The implementation history includes frontend delivery, email/password authentication, organization and profile persistence, REST/OpenAPI documentation, and runtime regression coverage."
+        ]
+      },
+      {
+        "h": "Engineering scope",
+        "bullets": [
+          "Next.js/React staff interfaces backed by typed API contracts.",
+          "TypeScript services with PostgreSQL persistence and versioned migrations.",
+          "Appointment and follow-up workflows, clinical and commercial modules, permissions, search, and print routes.",
+          "Shared blueprint contracts and regression tests to keep frontend and backend behavior aligned."
+        ]
+      },
+      {
+        "h": "Source availability",
+        "p": [
+          "This is private project work. This page summarizes my contribution without exposing the source code or patient data."
+        ]
+      }
+    ],
+    "github": null
+  },
+  {
+    "slug": "ella",
+    "name": "Ella",
+    "title": "Ella — Mobile App, Backend Services & Platform Engineering",
+    "role": "Software Engineer · Technoculture Research",
+    "period": "2024",
+    "desc": "Contributed across Ella’s React Native application and backend: authentication, persistent state, real-time messaging, voice flows, service integration, observability, and backup/restore infrastructure.",
+    "tags": [
+      "React Native",
+      "TypeScript",
+      "Python",
+      "Dapr",
+      "Redis",
+      "PostgreSQL",
+      "Kubernetes"
+    ],
+    "sections": [
+      {
+        "h": "Mobile application",
+        "bullets": [
+          "Implemented onboarding and authentication flows, authenticated routing, push notification registration, and camera interactions.",
+          "Built persistent client state and feature-flag plumbing with Zustand, MMKV, and React Query.",
+          "Integrated WebSocket communication, conversation context, and streaming speech flows."
+        ]
+      },
+      {
+        "h": "Backend and platform",
+        "bullets": [
+          "Contributed authentication/authorization and model-service integration, including Keycloak and LiteLLM.",
+          "Implemented horizontal WebSocket service scaling with Redis coordination and Kubernetes service changes.",
+          "Built Redis and PostgreSQL backup/restore infrastructure, including object-storage backups.",
+          "Contributed centralized logging, monitoring, data pipelines, and document-processing workflows."
+        ]
+      },
+      {
+        "h": "Ownership and evidence",
+        "p": [
+          "These are my contributions within a team product, spanning the mobile and backend repositories. Source code remains private; the summary focuses on the areas I implemented and operated."
+        ]
+      }
+    ],
+    "github": null
+  },
+  {
+    "slug": "vv-field-app",
+    "name": "VV Field App",
+    "title": "VV Field App — Mobile Field Operations & ERP Integration",
+    "role": "Full Stack Contributor · Technoculture Research",
+    "period": "2026",
+    "desc": "Contributed ERP integration, authentication, township/project aggregation, Android notifications, and release diagnostics to a React/TypeScript field-operations application.",
+    "tags": [
+      "React",
+      "TypeScript",
+      "Capacitor",
+      "Cloudflare Workers",
+      "Hono",
+      "Frappe / ERPNext"
+    ],
+    "sections": [
+      {
+        "h": "Application and integration",
+        "p": [
+          "The application uses a React web frontend with a Capacitor Android shell and a Cloudflare backend connected to ERPNext. My work connects field workflows to ERP services and improves the reliability of authentication, data access, and delivery."
+        ]
+      },
+      {
+        "h": "My contribution",
+        "bullets": [
+          "ERP OAuth/OpenID sign-in, API integration, and employee-aware write behavior.",
+          "Township/project aggregation and construction/manpower workflow integration.",
+          "Android push notifications and remote application-version checks.",
+          "Production configuration diagnostics, API error logging, and contract-version validation."
+        ]
+      },
+      {
+        "h": "Release engineering",
+        "p": [
+          "I also worked on a coordinated ERP contract and production-hardening proposal. Implementation and release preparation are distinct from production activation; this case study does not claim that every proposed release feature shipped."
+        ]
+      },
+      {
+        "h": "Source availability",
+        "p": [
+          "The repository is private. This summary describes my engineering contribution without sharing internal source code or operational records."
+        ]
+      }
+    ],
+    "github": null
+  },
+  {
+    "slug": "echoes",
+    "name": "Echoes",
+    "title": "Echoes — AI Collaboration, Retrieval & Voice",
+    "role": "Software Engineer · Technoculture Research",
+    "period": "2023 — 2024",
+    "desc": "Contributed real-time collaboration, organization-level retrieval, file handling, search, and voice features to an AI collaboration platform.",
+    "tags": [
+      "TypeScript",
+      "React",
+      "Ably",
+      "React Query",
+      "RAG",
+      "Object storage",
+      "Docker"
+    ],
+    "sections": [
+      {
+        "h": "My contribution",
+        "bullets": [
+          "Implemented live presence, typing indicators, and chat updates using Ably and React Query.",
+          "Contributed organization-level retrieval-augmented generation and organization-switching behavior.",
+          "Built object-storage file browsing, uploading, metadata handling, and file operations.",
+          "Integrated text/patent search and improved chat and navigation interfaces.",
+          "Contributed voice activity detection, transcription, text-to-speech handling for long responses, and containerization."
+        ]
+      },
+      {
+        "h": "Team product",
+        "p": [
+          "Echoes is a collaboration platform for people and AI. These are my contributions within the wider product; they do not imply sole ownership of the entire platform. Source code remains private."
+        ]
+      }
+    ],
+    "github": null
   },
   {
     slug: "md-task-tracker",
