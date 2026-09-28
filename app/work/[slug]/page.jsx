@@ -10,7 +10,10 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const p = projects.find((x) => x.slug === slug);
   if (!p) return {};
-  return { title: `${p.name} — Prince Baghel`, description: p.desc };
+  return { title: `${p.name} — Prince Baghel`, description: p.desc,
+    alternates: { canonical: `/work/${p.slug}` },
+    openGraph: { title: `${p.name} — Prince Baghel`, description: p.desc, url: `/work/${p.slug}` },
+  };
 }
 
 export default async function CaseStudy({ params }) {
@@ -30,7 +33,7 @@ export default async function CaseStudy({ params }) {
           <span>{p.role}</span>
           <span>{p.period}</span>
           {p.github && (
-            <a href={p.github} target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a href={p.github} target="_blank" rel="noreferrer">{p.slug === "vv-erp" ? "Related open-source tooling ↗" : "View source on GitHub ↗"}</a>
           )}
         </div>
         <div className="tags">
@@ -39,6 +42,7 @@ export default async function CaseStudy({ params }) {
 
         <div className="coverwrap">
           <Cover slug={p.slug} name={p.name} index={idx} height={300} />
+          <span className="fig">Concept illustration, not a product screenshot.</span>
         </div>
 
         {p.sections.map((s) => (
@@ -53,6 +57,11 @@ export default async function CaseStudy({ params }) {
           </div>
         ))}
 
+        <div className="case-contact">
+          <h2>Discuss this work</h2>
+          <p>Hiring for similar engineering challenges? I can walk through my contribution and the technical decisions behind this project.</p>
+          <a className="text-link" href={`mailto:pkbghl2@gmail.com?subject=${encodeURIComponent(`Engineering opportunity — ${p.name}`)}`}>Get in touch →</a>
+        </div>
         <div className="pager">
           <span>{prev && <a href={`/work/${prev.slug}`}>← {prev.name}</a>}</span>
           <span>{next && <a href={`/work/${next.slug}`}>{next.name} →</a>}</span>

@@ -6,12 +6,12 @@ import Nav from "./components/Nav";
 import { GitHubIcon, LinkedInIcon, MailIcon } from "./components/Icons";
 
 export const metadata = {
-  title: "Prince Baghel — Full Stack Engineer",
+  title: "Prince Baghel — Backend & Full Stack Software Engineer",
   description:
     "Full-stack engineer in Bengaluru building production systems end to end — distributed pipelines, clinical desktop software, ERP automation, and the React interfaces on top.",
   metadataBase: new URL("https://mprinceb.vercel.app"),
   openGraph: {
-    title: "Prince Baghel — Full Stack Engineer",
+    title: "Prince Baghel — Backend & Full Stack Software Engineer",
     description:
       "Distributed pipelines, clinical desktop software, ERP automation, and the React interfaces on top.",
     type: "website",
@@ -32,9 +32,9 @@ export default function RootLayout({ children }) {
           <div className="inner">
             <span>© {new Date().getFullYear()} / Prince Baghel</span>
             <span className="flinks">
-              <a href="https://github.com/mprinceb" target="_blank" rel="noreferrer"><GitHubIcon size={16} /></a>
-              <a href="https://linkedin.com/in/mprincebaghel" target="_blank" rel="noreferrer"><LinkedInIcon size={16} /></a>
-              <a href="mailto:pkbghl2@gmail.com"><MailIcon size={16} /></a>
+              <a href="https://github.com/mprinceb" aria-label="GitHub profile" target="_blank" rel="noreferrer"><GitHubIcon size={16} /></a>
+              <a href="https://linkedin.com/in/mprincebaghel" aria-label="LinkedIn profile" target="_blank" rel="noreferrer"><LinkedInIcon size={16} /></a>
+              <a href="mailto:pkbghl2@gmail.com" aria-label="Email Prince"><MailIcon size={16} /></a>
             </span>
           </div>
         </footer>
