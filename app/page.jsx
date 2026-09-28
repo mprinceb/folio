@@ -67,8 +67,8 @@ export default function Home() {
             </div>
             <div className="proof-strip" aria-label="Experience at a glance">
               <div><strong>3+ years</strong><span>Software engineering</span></div>
-              <div><strong>End-to-end</strong><span>ERP migration ownership</span></div>
-              <div><strong>300,000+</strong><span>Payment entries migrated</span></div>
+              <div><strong>50 branches</strong><span>Enabled in the ERP today</span></div>
+              <div><strong>2.16M</strong><span>General-ledger entries · Sep 2026</span></div>
             </div>
           </section>
 
@@ -124,9 +124,9 @@ export default function Home() {
                 <li>Contributed ERP authentication and integration, township aggregation, Android notifications, version checks, and production diagnostics across React, Capacitor, and Cloudflare services.</li>
               </ul>
 
-              <div className="proj-label"><a href="/work/vv-erp">vv-ERP — ERPNext/Frappe automation ↗</a></div>
+              <div className="proj-label"><a href="/work/vv-erp">vv-ERP — Enterprise ERP replacement ↗</a></div>
               <ul>
-                <li>Owned the complete Vastu Vihar ERP migration, including 300,000+ payment entries and payroll/HRMS migration from Keka. Continued engineering across CRM, sales, accounting, stock, construction, HR, and payroll workflows.</li>
+                <li>Owned the company-wide migration from Dataman Real Builder to ERPNext/Frappe, spanning bookings, construction, collections, accounting, stock and HR/payroll. The ERP now holds 31K+ customer records and 2.16M general-ledger entries across 50 enabled branches (September 2026); these describe current scale, not cutover volume.</li>
                 <li>Designed CI/CD pipelines and automated deployments on Kubernetes + ArgoCD; multi-bench deployments with Nginx and ELK monitoring; secure SSO via Keycloak/OAuth2.</li>
                 <li>Mentored interns on Frappe/ERPNext and Python with a structured training program.</li>
               </ul>

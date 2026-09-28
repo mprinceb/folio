@@ -78,45 +78,75 @@ export const projects = [
     github: null,
   },
   {
-    slug: "vv-erp",
-    name: "vv-ERP",
-    title: "vv-ERP — End-to-End ERP Migration & Business Automation",
-    role: "Software Engineer · ERP Migration & Platform Ownership",
-    period: "2023 — present",
-    desc: "Owned the complete Vastu Vihar ERP migration and ongoing ERPNext/Frappe engineering across business workflows. The migration included 300,000+ payment entries alongside broader ERP data and HRMS migration from Keka.",
-    tags: ["Frappe / ERPNext", "Python", "Kubernetes", "ArgoCD", "Keycloak", "Nginx", "ELK"],
-    sections: [
-      {
-        h: "Overview",
-        p: [
-          "I owned the complete migration for Vastu Vihar’s company-wide ERP, followed by ongoing customization and operations on ERPNext/Frappe. The scope extends across CRM, sales, accounting, payments, stock, construction, HR and payroll. The 300,000+ payment entries represent one part of that migration, not its full scope.",
-        ],
-      },
-      {
-        h: "Automation",
-        bullets: [
-          "Automated CRM, payroll, payment, accounting, and stock workflows with Frappe server scripts and custom apps.",
-          "Owned the end-to-end ERP migration, including payroll and HRMS migration from Keka to ERPNext.",
-          "Migrated 300,000+ payment entries as part of the wider ERP migration.",
-          "Published frappe-extend-auth, an open-source Frappe app configuring cross-site cookie behavior for allowed origins.",
-        ],
-      },
-      {
-        h: "Platform & operations",
-        bullets: [
-          "CI/CD pipelines and automated deployments on Kubernetes with ArgoCD (GitOps).",
-          "Multi-bench Frappe deployments behind Nginx, with ELK for monitoring and log analysis.",
-          "Single sign-on via Keycloak/OAuth2 across internal tools.",
-        ],
-      },
-      {
-        h: "Mentoring",
-        p: [
-          "I ran a structured training program teaching interns Frappe/ERPNext development and Python fundamentals.",
-        ],
-      },
+    "slug": "vv-erp",
+    "name": "vv-ERP",
+    "title": "Vastu Vihar — Enterprise ERP Replacement & Real-Estate Operations",
+    "role": "Software Engineer · End-to-End ERP Migration",
+    "period": "2023 — present",
+    "desc": "Owned the company-wide migration from Dataman Real Builder to ERPNext/Frappe. The platform now spans 50 enabled branches, 31K+ customer records and 2.16M general-ledger entries, connecting property bookings, construction, collections and accounting.",
+    "tags": [
+      "ERPNext / Frappe",
+      "Python",
+      "ERP migration",
+      "Real estate",
+      "Business workflows",
+      "Integrations"
     ],
-    github: "https://github.com/mprinceb/frappe-extend-auth",
+    "sections": [
+      {
+        "h": "Enterprise replacement, from business data to daily operations",
+        "p": [
+          "I owned Vastu Vihar’s company-wide migration from Dataman Real Builder to ERPNext/Frappe and continued engineering its business workflows. This was a replacement of an existing enterprise ERP, spanning property inventory and bookings, construction, collections, branch accounting, procurement, stock, HR and payroll. Payroll/HRMS migration from Keka was also part of my work."
+        ]
+      },
+      {
+        "h": "Verified operating scale",
+        "bullets": [
+          "50 enabled branches out of 72 branch records.",
+          "324 project/phase records and 10,951 unit-master records.",
+          "31,917 customer records and 356,986 payment/receipt entries.",
+          "2,156,965 general-ledger entries.",
+          "755 active employees; 5,129 employee records including historical records."
+        ],
+        "p": [
+          "These are current platform counts checked on 29 September 2026, not counts attributed to the original cutover. Project records include phases; customer records are not a claim about unique people."
+        ]
+      },
+      {
+        "h": "Engineering behind the migration",
+        "bullets": [
+          "Carried the business onto a Frappe/ERPNext customization layer with branch, project, phase and booking relationships. The implementation retains Dataman booking-reference fields in booking statements and receipt generation.",
+          "Worked on booking and payment workflows linking unit allocation, customer records, construction milestones and payment schedules, including cancellation and reversal behavior.",
+          "Continued engineering across branch accounting, fund movements, procurement, stock and payroll, with operational reporting and field-application integrations."
+        ]
+      },
+      {
+        "h": "What the platform enables",
+        "bullets": [
+          "A connected property lifecycle: inventory and booking through construction tracking, collections, transfers and registry approvals.",
+          "Consolidated branch-level collection and booking reporting, with project-wise filtering and separate collection channels.",
+          "Organization-specific approval and access workflows maintained in the ERP customization layer."
+        ],
+        "p": [
+          "A live collection-and-booking report for 1–29 September 2026 returned 42 branch rows and reported 3.73 seconds of execution time in one observed run. This is a point-in-time observation, not a benchmark or a measured improvement over Dataman."
+        ]
+      },
+      {
+        "h": "Platform & operations",
+        "bullets": [
+          "CI/CD and Kubernetes deployments with ArgoCD, multi-bench Frappe operations behind Nginx, and ELK monitoring.",
+          "Keycloak/OAuth2 integration and published Frappe authentication tooling.",
+          "Mentored interns in Python and Frappe/ERPNext development."
+        ]
+      },
+      {
+        "h": "Evidence and scope",
+        "p": [
+          "The migration source and end-to-end ownership are my account of the work. Operating-scale figures were checked against the live ERP; workflow descriptions were cross-checked against the application repository. Private source code, customer records and financial amounts are not published here. Before/after cost, time-saving and error-reduction percentages require an old-system baseline and are not asserted."
+        ]
+      }
+    ],
+    "github": "https://github.com/mprinceb/frappe-extend-auth"
   },
   {
     slug: "agspeak",
