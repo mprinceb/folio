@@ -3,7 +3,7 @@ import Cover from "./components/Cover";
 import Contributions from "./components/Contributions";
 import { GitHubIcon, LinkedInIcon, MailIcon } from "./components/Icons";
 
-const featured = ["sxd", "firstcheck", "md-task-tracker"].map((slug) => projects.find((p) => p.slug === slug));
+const featured = ["vv-erp", "ella", "sxd", "md-task-tracker"].map((slug) => projects.find((p) => p.slug === slug));
 
 export default function Home() {
   return (
@@ -60,15 +60,15 @@ export default function Home() {
               </p>
               <p>
                 At Technoculture Research, my work spans recoverable robotics
-                data pipelines, clinical desktop software, and ERP automation.
+                data pipelines, clinical software, mobile applications, and end-to-end ERP migration.
                 I work across implementation and deployment, with a focus on
                 safe retries, auditable data, and reliable integrations.
               </p>
             </div>
             <div className="proof-strip" aria-label="Experience at a glance">
               <div><strong>3+ years</strong><span>Software engineering</span></div>
-              <div><strong>3 products</strong><span>At Technoculture Research</span></div>
-              <div><strong>300,000+</strong><span>Payment entries processed</span></div>
+              <div><strong>End-to-end</strong><span>ERP migration ownership</span></div>
+              <div><strong>300,000+</strong><span>Payment entries migrated</span></div>
             </div>
           </section>
 
@@ -82,7 +82,7 @@ export default function Home() {
                   <span className="fig">Concept illustration · {f.name}</span>
                   <h3>{f.title}</h3>
                   <p>{f.desc}</p>
-                  <span className="evidence-label">{f.github ? "Case study + public source →" : "Production case study →"}</span>
+                  <span className="evidence-label">{f.slug === "vv-erp" ? "Case study + related tooling →" : f.github ? "Case study + public source →" : "Engineering case study →"}</span>
                 </a>
               ))}
             </div>
@@ -111,9 +111,22 @@ export default function Home() {
                 <li>Built LIS/analyzer connectivity with message framing, CRC/retry handling, and Node/Python native serial bindings; designed ERP-backed licensing and node-locking.</li>
               </ul>
 
+              <div className="proj-label"><a href="/work/ella">Ella — Mobile, backend &amp; platform engineering ↗</a></div>
+              <ul>
+                <li>Contributed React Native authentication, persistent state, real-time messaging, and voice flows; implemented backend integrations, WebSocket scaling, logging, and PostgreSQL/Redis backup and restore infrastructure.</li>
+              </ul>
+              <div className="proj-label"><a href="/work/echoes">Echoes — AI collaboration, retrieval &amp; voice ↗</a></div>
+              <ul>
+                <li>Contributed live collaboration, organization-level retrieval, file handling, search, and voice features for an AI collaboration platform.</li>
+              </ul>
+              <div className="proj-label"><a href="/work/vv-field-app">VV Field App — Field operations &amp; ERP integration ↗</a></div>
+              <ul>
+                <li>Contributed ERP authentication and integration, township aggregation, Android notifications, version checks, and production diagnostics across React, Capacitor, and Cloudflare services.</li>
+              </ul>
+
               <div className="proj-label"><a href="/work/vv-erp">vv-ERP — ERPNext/Frappe automation ↗</a></div>
               <ul>
-                <li>Automated CRM, payroll, payment, accounting, and stock workflows; migrated payroll &amp; HRMS from Keka to ERPNext; processed 300,000+ payment entries.</li>
+                <li>Owned the complete Vastu Vihar ERP migration, including 300,000+ payment entries and payroll/HRMS migration from Keka. Continued engineering across CRM, sales, accounting, stock, construction, HR, and payroll workflows.</li>
                 <li>Designed CI/CD pipelines and automated deployments on Kubernetes + ArgoCD; multi-bench deployments with Nginx and ELK monitoring; secure SSO via Keycloak/OAuth2.</li>
                 <li>Mentored interns on Frappe/ERPNext and Python with a structured training program.</li>
               </ul>
@@ -126,7 +139,7 @@ export default function Home() {
               </div>
               <div className="role">Full Stack Engineer</div>
               <ul>
-                <li>Built and operate a self-hosted <a href="/work/hms" style={{ borderBottom: "1px dashed var(--line)" }}>hospital management system</a> — patient records, appointments, and clinic workflows on an in-house Linux server with Postgres, secure remote access, and automated backups.</li>
+                <li>Built frontend, backend, and shared API contracts for a <a href="/work/hms" style={{ borderBottom: "1px dashed var(--line)" }}>hospital management system</a> — Next.js/React staff workflows, TypeScript services, PostgreSQL persistence, authentication, permissions, and regression coverage.</li>
               </ul>
             </div>
 

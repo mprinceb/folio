@@ -145,7 +145,7 @@ const ErpScene = () => (
         <Chiplet x={590} y={141 + i * 32} ok={i !== 2 && i !== 4} />
       </g>
     ))}
-    <text x={215} y={350} fontFamily="JetBrains Mono Variable, monospace" fontSize="10" fill={TXT}>payment entries · 300,412 processed</text>
+    <text x={215} y={350} fontFamily="JetBrains Mono Variable, monospace" fontSize="10" fill={TXT}>ERP migration · 300,000+ payment entries</text>
     <Bar x={215} y={358} w={380} h={4} c="rgba(255,180,84,.5)" />
   </Frame>
 );
