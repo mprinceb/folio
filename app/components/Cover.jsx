@@ -359,7 +359,30 @@ const FrappeAuthScene = () => (
   </g>
 );
 
+const EllaScene = () => (
+  <g>
+    <Phone x={110} y={60} w={185} h={330}>
+      <text x={132} y={106} fontFamily="monospace" fontSize="13" fill={A}>Ella</text>
+      <text x={132} y={129} fontFamily="monospace" fontSize="10" fill={TXT}>messaging &amp; voice</text>
+      {[0, 1, 2].map((i) => (
+        <g key={i}>
+          <rect x={128 + (i % 2) * 16} y={154 + i * 58} width={132} height={42} rx={10} fill={PANEL2} stroke={LINE} />
+          <Lines x={140 + (i % 2) * 16} y={167 + i * 58} ws={[92, 64]} gap={12} h={4} />
+        </g>
+      ))}
+    </Phone>
+    <Edge x1={300} y1={220} x2={420} y2={220} />
+    <Frame x={420} y={95} w={290} h={265} kind="app" label="Ella · service integrations">
+      <text x={442} y={157} fontFamily="monospace" fontSize="11" fill={TXT}>Authentication</text>
+      <text x={442} y={201} fontFamily="monospace" fontSize="11" fill={TXT}>Real-time messaging</text>
+      <text x={442} y={245} fontFamily="monospace" fontSize="11" fill={TXT}>Voice flows</text>
+      <text x={442} y={305} fontFamily="monospace" fontSize="10" fill={A}>PostgreSQL / Redis</text>
+    </Frame>
+  </g>
+);
+
 const scenes = {
+  ella: EllaScene,
   sxd: SxdScene,
   firstcheck: FirstcheckScene,
   "vv-erp": ErpScene,

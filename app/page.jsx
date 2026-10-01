@@ -3,7 +3,7 @@ import Cover from "./components/Cover";
 import Contributions from "./components/Contributions";
 import { GitHubIcon, LinkedInIcon, MailIcon } from "./components/Icons";
 
-const featured = ["vv-erp", "ella", "sxd", "md-task-tracker"].map((slug) => projects.find((p) => p.slug === slug));
+const featured = ["sxd", "ella", "md-task-tracker", "vv-erp"].map((slug) => projects.find((p) => p.slug === slug));
 
 export default function Home() {
   return (
@@ -50,7 +50,8 @@ export default function Home() {
               <a href="https://github.com/mprinceb" target="_blank" rel="noreferrer"><GitHubIcon /> GitHub</a>
               <a href="https://linkedin.com/in/mprincebaghel" target="_blank" rel="noreferrer"><LinkedInIcon /> LinkedIn</a>
               <a href="mailto:pkbghl2@gmail.com"><MailIcon /> Email</a>
-              <a href="/resume.pdf" download="Prince_Baghel_Resume.pdf">↓ Resume</a>
+              <a href="/resume.pdf" download="Prince_Baghel_Backend_Resume.pdf">↓ Backend resume</a>
+              <a href="/resume-full-stack.pdf" download="Prince_Baghel_Full_Stack_Resume.pdf">↓ Full-stack resume</a>
             </div>
             <div className="intro">
               <p>
@@ -59,16 +60,15 @@ export default function Home() {
                 Python, FastAPI, PostgreSQL, Node.js, TypeScript, and React.
               </p>
               <p>
-                At Technoculture Research, my work spans recoverable robotics
-                data pipelines, clinical software, mobile applications, and end-to-end ERP migration.
-                I work across implementation and deployment, with a focus on
-                safe retries, auditable data, and reliable integrations.
+                At Technoculture Research, I build recoverable data-processing workflows,
+                real-time product integrations, and services that support mobile and desktop applications.
+                My work covers implementation, authentication, deployment, and recovery from failures.
               </p>
             </div>
             <div className="proof-strip" aria-label="Experience at a glance">
               <div><strong>3+ years</strong><span>Software engineering</span></div>
-              <div><strong>50 branches</strong><span>Enabled in the ERP today</span></div>
-              <div><strong>2.16M</strong><span>General-ledger entries · Sep 2026</span></div>
+              <div><strong>Backend</strong><span>APIs, data processing &amp; recovery</span></div>
+              <div><strong>Full stack</strong><span>React, real-time features &amp; integrations</span></div>
             </div>
           </section>
 
@@ -146,7 +146,7 @@ export default function Home() {
             <div className="xp">
               <div className="xp-head">
                 <h3>AgSpeak</h3>
-                <span className="date">May 2023 — Dec 2024</span>
+                <span className="date">Apr 2023 — Jan 2025</span>
               </div>
               <div className="role">Frontend Developer (part-time, remote)</div>
               <ul>
@@ -193,8 +193,8 @@ export default function Home() {
 
             <div className="skillgroup">
               <h4>DevOps &amp; platforms</h4>
-              <p>I run what I build: GitOps deployments on Kubernetes with ArgoCD, infrastructure with Terraform, observability with ELK, and deep Frappe/ERPNext platform work.</p>
-              <div className="tags"><span>Docker</span><span>Kubernetes</span><span>ArgoCD</span><span>Terraform</span><span>Linux / systemd</span><span>Nginx</span><span>Helm</span><span>ELK</span><span>Frappe / ERPNext</span><span>Cloudflare R2</span></div>
+              <p>I deploy and support the services I build using Kubernetes, ArgoCD, Nginx and ELK. My work also includes authentication and integrations across Frappe/ERPNext and external applications.</p>
+              <div className="tags"><span>Docker</span><span>Kubernetes</span><span>ArgoCD</span><span>Linux / systemd</span><span>Nginx</span><span>Helm</span><span>ELK</span><span>Frappe / ERPNext</span><span>Cloudflare R2</span></div>
             </div>
           </section>
 
